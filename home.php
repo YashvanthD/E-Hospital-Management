@@ -107,7 +107,7 @@ body {
   <div class='login'>
       <table>
           <tr><td>
-    <form action="../doctor/main.php" method="POST">
+    <form action="main.php" method="POST">
         <input type="text"> </td></tr>
         <tr><td><input type="password"></td></tr>
         <tr><td><input type="submit"></td></tr>

@@ -1,5 +1,5 @@
 <?php
 // include 'main.php';
 
-include 'assets/index.php';
+include 'home.php';
 ?>

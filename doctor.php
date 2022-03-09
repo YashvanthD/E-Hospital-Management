@@ -14,7 +14,7 @@
 </div>
 <div></div>
 <div class="sidenav">
-<a href="../"><button class="tablink" onclick="openCity('home', this, 'red')" id="defaultOpen">Home</button></a><br>
+<button class="tablink" onclick="openCity('home', this, 'red')" id="defaultOpen">Home</button><br>
 <button class="tablink" onclick="openCity('profile', this, 'green')">Profile</button><br>
 <button class="tablink" onclick="openCity('update', this, 'blue')">Update</button><br>
 <button class="tablink" onclick="openCity('app', this, 'orange')">Appointment</button>
@@ -24,7 +24,7 @@
 
 
 <div class="main">
-  <h2>Hi Patient</h2>
+  <h2>Hi Doctor</h2>
   <div class="content">
 
   <div id="home" class="tabcontent">
@@ -42,16 +42,14 @@
 </div>
 
 <div id="app" class="tabcontent">
-<h1>Add Appointment</h1>
+<h1> Appointment</h1>
 Add Appointment
-<?php include 'addappointment.php'; ?>
+
 </div>
 
 
 <div id="viewapp" class="tabcontent">
-<h1>View Appointment</h1>
-
-<?php include 'applistpat.php'; ?>
+<?php include 'applistdoct.php'; ?>
 
 </div>
 
@@ -64,11 +62,7 @@ Add Appointment
 </div>
 </div>
 
-<style>
-  tr:{
 
-  }
-</style>
 
 
 

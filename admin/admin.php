@@ -59,7 +59,7 @@ I am honarable on my Works. </h3>
   <h1>Update</h1>
   <hr>
   <center>
-  <form action="">
+  <form action="updatepassword" method=POST>
       <table style="padding:20px;margin:15px;border:unset;background-color:white">
       <tr>
         <td> Password : </td><td><input type="text" name="pass"><br></td>
@@ -78,6 +78,7 @@ I am honarable on my Works. </h3>
 
 <div id="viewapp" class="tabcontent">
 <h1>list Appointment</h1>
+<hr>
 <?php include '../assets/listappointments.php';?>
 
 </div>
@@ -86,7 +87,11 @@ I am honarable on my Works. </h3>
 <div id="viewdoctors" class="tabcontent">
 <h1>View Doctors</h1>
 <hr>
-<?php include '../assets/listdoctors.php';?>
+
+<?php include '../data/doctorlist.php';
+echo $table;
+?>
+
 </div>
 
 
@@ -95,21 +100,27 @@ I am honarable on my Works. </h3>
 <hr>
 <center>
     <table style="padding:20px;margin:15px;border:unset;background-color:white">
-<form action="">
+<form action="../assets/adddoctors.php"  method=POST>
     <tr>
-      <td>Name</td><td><input type="text" name="dname"></td>
+      <td>Name</td><td><input type="text" name="dname" required></td>
     </tr>
     <tr>
-      <td>phone</td><td><input type="number" name="dnumber" ></td>
+      <td>phone</td><td><input type="number" name="dnumber" required ></td>
     </tr>
     <tr>
-      <td>speacialization</td><td><input type="text" name="specialization"></td>
+      <td>speacialization</td><td><input type="text" name="dspecialization" required></td>
     </tr>
     <tr>
-      <td>Hospital</td><td><input type="text" name="dhospital"></td>
+      <td>Hospital</td><td><input type="text" name="dhospital" required></td>
     </tr>
     <tr>
-      <td>address</td><td><input type="address" name="adress"></td>
+      <td>address</td><td><input type="address" name="dadress" required></td>
+    </tr>
+    <tr>
+      <td>date of birth</td><td><input type="date" name="ddob" required></td>
+    </tr>
+    <tr>
+      <td>email</td><td><input type="address" name="dmail" required></td>
     </tr>
     <tr>
       <td colspan="2"><input type="submit"  style="width:100%;height:40px;font-size:20px; background-color:white" value="Add"> </td>
@@ -119,6 +130,8 @@ I am honarable on my Works. </h3>
 
     </center>
 </div>
+
+
 
 
 <div id="querry" class="tabcontent">

@@ -65,8 +65,8 @@ Add Appointment
 </div>
 
 <style>
-  tr:{
-
+  tr:hover{
+background-color: white;
   }
 </style>
 

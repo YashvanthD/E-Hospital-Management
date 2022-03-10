@@ -22,7 +22,7 @@ table {
 }
 
 a{
-    decoration:unset;
+    text-decoration:unset;
     text-decoration:unset;
     color:black;
 }

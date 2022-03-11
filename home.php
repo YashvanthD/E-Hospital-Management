@@ -11,14 +11,14 @@
 <style>
 
 body {
-    font-family: Arial;}
-
+    font-family: Arial;} 
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   margin-top:20px;
+  color: black;
 }
 
 
@@ -36,13 +36,14 @@ body {
 .header {
     padding: 10px 16px;
     width:100%;
-
+    background-color: lightcyan;
     color: black;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
+  color: lightsteelblue;
 }
 
 /* Create an active/current tablink class */
@@ -57,7 +58,7 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   box-shadow: 0 1px 10px 1px black;
-
+  background-color: lightcyan;
 }
 .login{
     padding:30px;
@@ -70,7 +71,8 @@ body {
 input[type="submit"]
   {width:150px; 
   height: 30px;
-
+  color: black;
+  
 }
 input[type="submit"]:hover{
   background-color: rgb(238, 238, 238);

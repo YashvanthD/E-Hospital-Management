@@ -11,7 +11,10 @@
 <style>
 
 body {
-    font-family: Arial;} 
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+  } 
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -20,7 +23,12 @@ body {
   margin-top:20px;
   color: black;
 }
-
+.all-tabs{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  background-color : #f1f1f1;
+}
 
 /* Style the buttons inside the tab */
 .tab button {
@@ -61,18 +69,34 @@ body {
   background-color: lightcyan;
 }
 .login{
+    display: flex;
     padding:30px;
-    margin-left:25%;
-    align-items:center;
+    margin: 0;
+    /*align-items:center;*/
     width:50%;
     align-content:center;
     text-align:center;
+  
+}
+#patient{
+  display: flex;
+  justify-content: center;
 }
 input[type="submit"]
   {width:150px; 
   height: 30px;
   color: black;
   
+}
+img{
+  /*justify-content: center;*/
+  /*border-width:10px ;
+  border-style: solid;*/
+  width: 100%;
+  height: 100%;
+}
+.tab button{
+  align-items: right;
 }
 input[type="submit"]:hover{
   background-color: rgb(238, 238, 238);
@@ -85,21 +109,23 @@ input[type="submit"]:hover{
 <div class="header" id="myHeader">
   <center><h2>Siddaganga Instutute of Technology</h2></center>
 </div>
-
-<div class="tab">
-<button class="tablinks" onclick="openCity(event, 'home')" id="defaultOpen">Home</button>
-  <button class="tablinks" onclick="openCity(event, 'about')">About</button>
-  <button class="tablinks" onclick="openCity(event, 'contact')">Contact </button>
+<div class ="all-tabs">
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'home')" id="defaultOpen">Home</button>
+    <button class="tablinks" onclick="openCity(event, 'about')">About</button>
+    <button class="tablinks" onclick="openCity(event, 'contact')">Contact </button>
+  </div>
+  <div class="tab" >
+    <button class="tablinks-right" onclick="openCity(event, 'patient')" id="defaultOpen">Patient</button>
+    <button class="tablinks-right" onclick="openCity(event, 'doctor')">Doctor</button>
+    <button class="tablinks-right" onclick="openCity(event, 'admin')">Admin</button>
+  </div>
+<!-- </div> -->
 </div>
 
-
-<div class="tab" style="float:right;">
-  <button class="tablinks" onclick="openCity(event, 'patient')" id="defaultOpen">Patient</button>
-  <button class="tablinks" onclick="openCity(event, 'doctor')">Doctor</button>
-  <button class="tablinks" onclick="openCity(event, 'admin')">Admin</button>
-
-</div>
-
+<!-- <div class="starting-img"> -->
+  <img  class ="starting-img" src="images/medical.jpg">
+<!-- </div> -->
 
 </div><div id="home" class="tabcontent">
   <h3>Electronic Hospital Management </h3>

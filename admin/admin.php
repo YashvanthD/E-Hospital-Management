@@ -30,8 +30,9 @@ $u=$_SESSION['admin'];
 <button class="tablink" onclick="openCity('viewapp', this, 'maroon')">view appointments</button>
 <button class="tablink" onclick="openCity('adddoctors', this, 'gray')">Manage Doctors</button>
 <button class="tablink" onclick="openCity('viewdoctors', this, 'pink')">Doctor list</button>
-<button class="tablink" onclick="openCity('querry', this, 'purple')">querry</button>
+<button class="tablink" onclick="openCity('addpatients', this, '	#87CEEB')">Add Patients</button>
 <button class="tablink" onclick="openCity('patients', this, 'black')">Patient list</button>
+<button class="tablink" onclick="openCity('querry', this, 'purple')">querry</button>
 <button class="tablink" onclick="window.location='logout.php';">Logout</button>
 </div>
 
@@ -142,11 +143,58 @@ echo $table;
 
 
 
+<div id="addpatients" class="tabcontent">
+<h1>Add Patient</h1>
+<hr>
+<center>
+    <table style="padding:20px;margin:15px;border:unset;background-color:white">
+<form action="../assets/addpatients.php"  method=POST>
+    <tr>
+      <td>Name</td><td><input type="text" name="dname" required></td>
+    </tr>
+    <tr>
+      <td>phone</td><td><input type="number" name="dnumber"  pattren="[0-9]{10}" required ></td>
+    </tr>
+    <tr>
+      <td>Aadhar</td><td><input type="text" name="daadhar" pattren="[0-9]{12}" required></td>
+    </tr>
+    <tr>
+      <td>Gender</td><td> male <input type="radio" name="dgender" value="male" required> Female <input type="radio" name="dgender" value="female" required></td>
+    </tr>
+    <tr>
+      <td>address</td><td><input type="address" name="dadress" required></td>
+    </tr>
+    <tr>
+      <td>date of birth</td><td><input type="date" name="ddob" required></td>
+    </tr>
+    <tr>
+      <td>email</td><td><input type="mail" name="dmail" required></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="submit"  style="width:100%;height:40px;font-size:20px; background-color:white" value="Add"> </td>
+    </tr>
+    </table>
+    </form>
+
+    </center>
+</div>
+
+<div id="viewpatientsdetails" class="tabcontent">
+<h1> Name of the Patient </h1>
+
+<?php include '../data/viewpatient.php';
+echo $table;
+?>
+</div>
+
+
 
 <div id="patients" class="tabcontent">
 <h1> Patients </h1>
 <hr>
-<?php include '../assets/listdoctors.php';?>
+<?php include '../data/patientlist.php';
+echo $table;
+?>
 </div>
 
 

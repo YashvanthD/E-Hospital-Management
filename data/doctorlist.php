@@ -41,14 +41,16 @@ else {
         <td>
             Delete
         </td>
-    </tr>";
+    </tr>
+    <tr><td colspan='6'><hr></td></tr>
+    ";
     $i=0;
 while($i<$Nrow){
 
 	$rows=mysqli_fetch_assoc($result);
 
 	$did=$rows['did'];
-    $name=$rows['name'];
+    $name=ucwords($rows['name']);
     $hos=$rows['hospital'];
     $spe=$rows['specialization'];
     $ph=$rows['mobile'];
@@ -70,7 +72,7 @@ while($i<$Nrow){
        $ph
     </td>
     <td>
-        <form action='deleted' method=POST><input type='text' name='did' hidden value='$did'> <input type='submit' style='width:100%' value='Delete'></form>
+        <form action='deleted' method=POST><input type='text' name='did' hidden value='$did'> <input type='submit' style='width:100%;background-color:red' value='Delete'></form>
     </td>
     </tr>";
     $i=$i+1;

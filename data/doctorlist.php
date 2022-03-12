@@ -3,6 +3,21 @@
 include '../assets/conn.php';
 
 
+
+$sql = "CREATE TABLE IF NOT EXISTS doctor(
+    did int NOT NULL AUTO_INCREMENT,
+    name varchar(128) NOT NULL,
+    password varchar(128) default 'Doct123',
+    specialization varchar(128),
+    mobile varchar(12) UNIQUE,
+    mail varchar(128) UNIQUE,
+    address varchar(512),
+    hospital varchar(256),
+    dob date,
+    primary key(did))     ;  ";  
+
+$result = mysqli_query($conn, $sql);
+
 $sql = "select * 
 		from doctor
         order by did; ";  

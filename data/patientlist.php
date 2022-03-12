@@ -2,10 +2,30 @@
 
 include '../assets/conn.php';
 
+$sql = "CREATE TABLE IF NOT EXISTS patient(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(512),
+    address varchar(512),
+    mobile varchar(13),
+    mail varchar(126),
+    dob date,
+    gender varchar(10),
+    password varchar(64),
+    aadhar varchar(12) NOT NULL UNIQUE,
+    father varchar(128),
+    mother varchar(128),
+    blood varchar(10),
+    weight int,
+    height int,
+
+    primary key(id,aadhar));";
+
+
+$result = mysqli_query($conn, $sql);
 
 $sql = "select * 
 		from patient
-        order by pid; ";  
+        order by id; ";  
 
 $result = mysqli_query($conn, $sql);
 $Nrow=mysqli_num_rows($result);
@@ -52,7 +72,7 @@ while($i<$Nrow){
 
 	$rows=mysqli_fetch_assoc($result);
 
-	$did=$rows['pid'];
+	$did=$rows['id'];
     $name=$rows['name'];
     $hos=$rows['aadhar'];
     $spe=$rows['gender'];

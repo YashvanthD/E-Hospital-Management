@@ -8,6 +8,8 @@ $num=$_POST['dnumber'];
 $mail=$_POST['dmail'];
 $dob=$_POST['ddob'];
 $add=$_POST['dadress'];
+$fname=$_POST['fname'];
+$mname=$_POST['mname'];
 
 
 if(isset($_POST['pass']))

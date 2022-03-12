@@ -44,8 +44,7 @@
     }
     
     table {
-        border: black 0.6px solid;
-        box-shadow: 0 0 2px 3px#251a1a;
+        padding: 15px;
     }
     
     @media screen and (max-height: 450px) {

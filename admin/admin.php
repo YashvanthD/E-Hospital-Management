@@ -4,6 +4,7 @@ session_start();
 if(! isset( $_SESSION['admin'])  ){
   echo '<meta http-equiv="refresh" content="0; url=/hospital">';
 }
+else{
 $u=$_SESSION['admin'];
 
 ?>
@@ -156,7 +157,7 @@ echo $table;
       <td>phone</td><td><input type="number" name="dnumber"  pattren="[0-9]{10}" required ></td>
     </tr>
     <tr>
-      <td>Aadhar</td><td><input type="text" name="daadhar" pattren="[0-9]{12}" required></td>
+      <td>Aadhar</td><td><input type="number" name="daadhar" pattren="[0-9]{12}" required></td>
     </tr>
     <tr>
       <td>Gender</td><td> male <input type="radio" name="dgender" value="male" required> Female <input type="radio" name="dgender" value="female" required></td>
@@ -219,3 +220,8 @@ echo $table;
    
 </body>
 </html> 
+<?php 
+
+
+}
+?>

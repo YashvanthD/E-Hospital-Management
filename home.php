@@ -5,14 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital</title>
+
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 </head>
 <body>
 <!-- <link rel="stylesheet" href="style.css"> -->
 <style>
 
 body {
-    font-family: Arial;}
+    font-family: Arial;
+   
 
+
+
+  }
+img{  background-image: url('./images/medical.jpg');
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; opacity: 0.1;}
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -52,6 +64,7 @@ body {
 
 /* Style the tab content */
 .tabcontent {
+
     margin-top:30px;
   display: none;
   padding: 6px 12px;
@@ -90,9 +103,12 @@ input[type="submit"]:hover{
   <button class="tablinks" onclick="openCity(event, 'contact')">Contact </button>
 </div>
 
+<script>
+document.getElementById("defaultOpen").click();
+</script>
 
 <div class="tab" style="float:right;">
-  <button class="tablinks" onclick="openCity(event, 'patient')" id="defaultOpen">Patient</button>
+  <button class="tablinks" onclick="openCity(event, 'patient')">Patient</button>
   <button class="tablinks" onclick="openCity(event, 'doctor')">Doctor</button>
   <button class="tablinks" onclick="openCity(event, 'admin')">Admin</button>
 
@@ -153,7 +169,7 @@ input[type="submit"]:hover{
         <tr><td  colspan="2"><hr> </td></tr>
       <tr><td   colspan="2"><input type="submit"></td></tr>    </form>  
 
-      <tr><td  colspan="2"><a href="upform.php"><button>Logup</button></a></td></tr>
+      <tr><td  colspan="2"><a href="patient/upform.php"><button>Logup</button></a></td></tr>
     </table>
 
 </div>

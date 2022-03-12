@@ -1,20 +1,13 @@
 <?php
 
-session_start();
+
 if(isset($_SESSION['patient']))
 {
     $user= $_SESSION['patient'];
-    $pass= $_SESSION['password'];
+    $pass= $_SESSION['pid'];
 }
 
-if(isset($_POST['user'])){
-
-$user=$_POST['user'];
-$pass=$_POST['pass'];
-}
-// echo $user,$pass;
-
-include 'assets/conn.php';
+include '../assets/conn.php';
 
 $sql = "CREATE TABLE IF NOT EXISTS patient(
         id int NOT NULL AUTO_INCREMENT,
@@ -41,7 +34,7 @@ $result = mysqli_query($conn, $sql);
 
 $sql = "select * 
 		from patient
-		where name='$user' and password='$pass';";  
+		where name='$user' and id='$pass';";  
 
 $result = mysqli_query($conn, $sql);
 $Nrow=mysqli_num_rows($result);
@@ -59,8 +52,8 @@ if ($errorr || $Nrow==0){
 		}
 else {
 	$rows=mysqli_fetch_assoc($result);
-	$passF=$rows['password'];
-	if($pass==$passF){
+
+
         $_SESSION['pid']=$rows['id'];
         $_SESSION['patient']=$rows['name'];
         $_SESSION['pdob']=$rows['dob'];
@@ -75,12 +68,9 @@ else {
         $_SESSION['ppassword']=$rows['password'];
         $_SESSION['pgender']=$rows['gender'];
 
-        echo '<meta http-equiv="refresh" content="0; url=./patient/patient.php">';
-	}
-	else{
-        echo $rows['name'],$rows['password'],$pass;
-		echo '<h1 style="color:red">Invalid password</h1>';	
-	}
+    
+	
+
 	}
 ?>
 <!-- <meta http-equiv="refresh" content="0; url=/"> -->
